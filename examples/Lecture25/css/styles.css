@@ -1,0 +1,27 @@
+
+body {
+	position: relative;
+}
+h2 {
+	text-align: center;
+	color: red;
+	
+}
+.upperRight {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 100px;
+	margin:2px;
+		
+}
+.middle {
+	position: absolute;
+	top: 100px;
+	left: -200px;
+	width: 1800px;
+	
+}
+.center {
+		text-align: center;
+}
