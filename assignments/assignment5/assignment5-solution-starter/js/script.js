@@ -40,8 +40,11 @@ var showLoading = function (selector) {
 // with propValue in given 'string'
 var insertProperty = function (string, propName, propValue) {
   var propToReplace = "{{" + propName + "}}";
+  //ert(propToReplace);
+  
   string = string
     .replace(new RegExp(propToReplace, "g"), propValue);
+	//ert(string);
   return string;
 };
 
@@ -106,8 +109,9 @@ function buildAndShowHomeHTML (categories) {
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
 
-		insertProperty (homeHtml, "randomCategoryShortName", 'shortName');
-		alert(homeHtml);
+		insertProperty (homeHtml, "randomCategoryShortName", "'"+shortName+"'");
+		//ert(shortName);
+		
 		
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
@@ -122,7 +126,7 @@ function buildAndShowHomeHTML (categories) {
       //
       // var homeHtmlToInsertIntoMainPage = ....
 	insertHtml("#main-content", homeHtml);
-
+	//ert(homeHtml);
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
